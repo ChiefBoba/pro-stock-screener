@@ -135,8 +135,11 @@ with tab3:
 
 with tab4:
     st.subheader("Alert Log")
-    for log in reversed(st.session_state.alert_log[-10:]):
-        st.write(f"**{log['time']}** • {log['title']}: {log['message']}")
+    if st.session_state.alert_log:
+        for log in reversed(st.session_state.alert_log[-10:]):
+            st.write(f"**{log['time']}** • **{log['title']}**: {log['message']}")
+    else:
+        st.info("No alerts triggered yet. They'll appear here in real-time.")
 
 # Auto-Rerun (Safer: Use st.rerun() instead of sleep for Cloud)
 if st.button("Refresh Data"):
