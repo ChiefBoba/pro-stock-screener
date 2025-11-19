@@ -1,8 +1,7 @@
-streamlit==1.38.0
-yfinance==0.2.40
-pandas==2.2.2
-numpy==1.26.4
-plotly==5.22.0
-scipy==1.13.1
-websocket-client==1.8.0
-plyer==2.1.0
+streamlit
+yfinance
+pandas
+numpy
+plotly
+scipy
+websocket-client
